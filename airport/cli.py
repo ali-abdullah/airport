@@ -5,6 +5,7 @@ Usage:
   airport -h | --help
   airport --version
   airport listdir   
+  airport hi
 
 Options:
   -h --help                         Show this screen.

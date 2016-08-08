@@ -1,8 +1,10 @@
+from setuptools import setup, find_packages
+from airport import __version__ 
 
 setup(
     name = 'airport',
     version = __version__,
-    description = 'CLI program to change directory easily. ',
+    description = 'CLI program to change directory easily.',
     url = 'https://github.com/ali-abdullah/airport',
     author = 'Ali Abdullah',
     author_email = 'ali.abdullah.salahuddin@gmail.com',
