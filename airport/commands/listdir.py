@@ -37,6 +37,7 @@ class list(Base):
                                 
             return current_row[-1]
 
+        #Search engine to find relevant directory 
         def fuzzymatch(input_search, gallery):
                 
                 dictionary = {}
@@ -123,7 +124,18 @@ class list(Base):
         #Splits the obtained list into a list 
         for line in pathlist:
             x = line.split(",")
-            list.append(x)
+            list.append(str(x))
         
-        #print the index from the list
-        pprint(list[0])
+        #Input from the user to choose directory
+        string = raw_input("Directory ")
+
+        #Removes the first two and last two characters i.e. [" "]
+        path = fuzzymatch(string,list)
+        path = path[2:-2]
+
+        #Changes working directory and starts a new bash process in the new directory
+        os.chdir(path)
+        os.system("pwd")
+        os.system("/bin/bash")
+
+        
